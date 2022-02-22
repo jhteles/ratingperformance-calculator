@@ -1,8 +1,9 @@
 import pandas as pd
 
+url = "https://raw.githubusercontent.com/jhteles/ratingperformance-calculator/master/tabela_rating_performance.csv"
+
 # Importa a tabela 8.1a do manual da FIDE
-df = pd.read_excel(r'C:\Users\joseh\Documents\tabela_rating_performance.xlsx')
-# place "r" before the path string to address special character, such as '\'. //
+df = pd.read_csv(url, sep=';')              # divide em colunas valores separados por ';'
 
 print("Digite o rating dos adversários, separados por espaços: ")
 
